@@ -1,0 +1,266 @@
+
+// Direct Link Communications - Single-file React component
+// - Built with Tailwind CSS utility classes
+// - Default export `DirectLinkWebsite` is a full single-page site component
+// - Usage: place inside a React app (Vite/CRA/Next) with Tailwind configured
+// - Optional: replace placeholder images and tweak content
+
+import React from 'react';
+import { motion } from 'framer-motion';
+
+export default function DirectLinkWebsite() {
+  return (
+    <div className="min-h-screen bg-gray-50 text-gray-900 antialiased">
+      {/* NAV */}
+      <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <a href="#home" className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-gradient-to-br from-indigo-600 to-teal-400 rounded-lg flex items-center justify-center text-white font-bold">DL</div>
+            <div>
+              <div className="font-semibold">Direct Link Communications</div>
+              <div className="text-xs text-gray-500">Marketing & Communications — South Africa</div>
+            </div>
+          </a>
+
+          <nav className="hidden md:flex gap-6 items-center text-sm font-medium">
+            <a href="#about" className="hover:text-indigo-600">About</a>
+            <a href="#services" className="hover:text-indigo-600">Services</a>
+            <a href="#work" className="hover:text-indigo-600">Work</a>
+            <a href="#contact" className="text-white bg-indigo-600 px-4 py-2 rounded-md shadow hover:brightness-95">Get In Touch</a>
+          </nav>
+
+          <div className="md:hidden">
+            <MobileMenu />
+          </div>
+        </div>
+      </header>
+
+      {/* HERO */}
+      <main id="home">
+        <section className="pt-12 pb-20">
+          <div className="max-w-7xl mx-auto px-6 grid gap-12 md:grid-cols-2 items-center">
+            <motion.div initial={{ x: -30, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.6 }}>
+              <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">We amplify brands in South Africa with strategy, creativity and results.</h1>
+              <p className="mt-6 text-lg text-gray-700">Direct Link Communications is a dynamic marketing and communications agency passionate about seeing our clients succeed in South Africa. We blend creativity with strategic expertise to amplify our clients’ presence.</p>
+
+              <div className="mt-8 flex gap-4">
+                <a href="#contact" className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md font-medium shadow">Get In Touch</a>
+                <a href="#services" className="inline-block border border-gray-200 px-6 py-3 rounded-md text-gray-700">Our Services</a>
+              </div>
+
+              <div className="mt-8 grid grid-cols-3 gap-4">
+                <Stat label="Years" value="8+" />
+                <Stat label="Clients" value="120+" />
+                <Stat label="Campaigns" value="300+" />
+              </div>
+            </motion.div>
+
+            <motion.div initial={{ x: 30, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.6 }} className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-xl bg-white">
+                <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="marketing team" className="w-full h-[420px] object-cover" />
+              </div>
+
+              <div className="mt-4 text-sm text-gray-600">Strategic planning • Digital campaigns • Creative production</div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* ABOUT */}
+        <section id="about" className="py-16 bg-white">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-10 items-center">
+              <div>
+                <h2 className="text-3xl font-bold">About Us</h2>
+                <p className="mt-4 text-gray-700">Direct Link Communications is a dynamic marketing and communications agency dedicated to helping our clients thrive in South Africa’s competitive market. We combine creativity with strategic insight to strengthen brands, amplify visibility, and drive measurable results.</p>
+
+                <ul className="mt-6 space-y-3 text-gray-700">
+                  <li>• Integrated marketing strategies tailored to local audiences</li>
+                  <li>• Creative campaigns and content that resonate</li>
+                  <li>• Media relations, digital advertising, and event support</li>
+                </ul>
+
+                <div className="mt-6">
+                  <a href="#contact" className="inline-block bg-teal-500 text-white px-5 py-2 rounded-md">Work with us</a>
+                </div>
+              </div>
+
+              <div>
+                <div className="rounded-xl overflow-hidden shadow-md">
+                  <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="team collaboration" className="w-full h-72 object-cover" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SERVICES */}
+        <section id="services" className="py-16">
+          <div className="max-w-6xl mx-auto px-6">
+            <h3 className="text-2xl font-semibold">Services</h3>
+            <p className="mt-2 text-gray-600">From strategy to execution — tailored for the South African market.</p>
+
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              <ServiceCard title="Brand Strategy" desc="Positioning, messaging, and brand architecture to stand out." />
+              <ServiceCard title="Digital Marketing" desc="Paid media, social, email and content to drive leads and awareness." />
+              <ServiceCard title="PR & Media" desc="Local media outreach, press events, and reputation building." />
+            </div>
+          </div>
+        </section>
+
+        {/* WORK / CASES */}
+        <section id="work" className="py-16 bg-white">
+          <div className="max-w-6xl mx-auto px-6">
+            <h3 className="text-2xl font-semibold">Selected Work</h3>
+            <p className="mt-2 text-gray-600">Campaign highlights and case studies that delivered results.</p>
+
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              <CaseCard title="Retail Launch" subtitle="Awareness + 30% sales uplift" img="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" />
+              <CaseCard title="NGO Fundraiser" subtitle="Raised R2M in 3 weeks" img="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" />
+              <CaseCard title="Tech Brand Growth" subtitle="+50% digital engagement" img="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" />
+            </div>
+          </div>
+        </section>
+
+        {/* CONTACT */}
+        <section id="contact" className="py-16">
+          <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-start">
+            <div>
+              <h3 className="text-2xl font-semibold">Get in touch</h3>
+              <p className="mt-2 text-gray-600">Let’s start a conversation about your next campaign or communications challenge.</p>
+
+              <div className="mt-6 space-y-4">
+                <ContactInfo />
+              </div>
+            </div>
+
+            <div>
+              <ContactForm />
+            </div>
+          </div>
+        </section>
+
+        {/* FOOTER */}
+        <footer className="bg-slate-900 text-slate-200 py-8">
+          <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div>
+              <div className="font-semibold">Direct Link Communications</div>
+              <div className="text-sm text-slate-400">© {new Date().getFullYear()} Direct Link Communications — All rights reserved</div>
+            </div>
+
+            <div className="text-sm text-slate-400">Made with care for South African brands.</div>
+          </div>
+        </footer>
+      </main>
+    </div>
+  );
+}
+
+/* ---------- Subcomponents ---------- */
+
+function MobileMenu() {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <div className="relative">
+      <button onClick={() => setOpen(!open)} aria-label="menu" className="p-2 rounded-md border">
+        ☰
+      </button>
+
+      {open && (
+        <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg p-3">
+          <a href="#about" className="block py-2">About</a>
+          <a href="#services" className="block py-2">Services</a>
+          <a href="#contact" className="block py-2">Get In Touch</a>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Stat({ label, value }) {
+  return (
+    <div className="bg-white rounded-lg p-4 shadow-sm text-center">
+      <div className="text-xl font-bold">{value}</div>
+      <div className="text-sm text-gray-500">{label}</div>
+    </div>
+  );
+}
+
+function ServiceCard({ title, desc }) {
+  return (
+    <div className="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+      <div className="font-semibold text-lg">{title}</div>
+      <p className="mt-2 text-gray-600">{desc}</p>
+      <div className="mt-4">
+        <a href="#contact" className="text-sm font-medium">Talk to us →</a>
+      </div>
+    </div>
+  );
+}
+
+function CaseCard({ title, subtitle, img }) {
+  return (
+    <div className="bg-white rounded-xl overflow-hidden shadow">
+      <img src={img} alt={title} className="w-full h-40 object-cover" />
+      <div className="p-4">
+        <div className="font-semibold">{title}</div>
+        <div className="text-sm text-gray-600 mt-1">{subtitle}</div>
+      </div>
+    </div>
+  );
+}
+
+function ContactInfo() {
+  return (
+    <div className="space-y-3 text-gray-700">
+      <div>
+        <div className="text-sm font-medium">Email</div>
+        <div className="text-sm">hello@directlink.co.za</div>
+      </div>
+      <div>
+        <div className="text-sm font-medium">Phone</div>
+        <div className="text-sm">+27 21 555 0123</div>
+      </div>
+      <div>
+        <div className="text-sm font-medium">Address</div>
+        <div className="text-sm">Cape Town, South Africa</div>
+      </div>
+
+      <div className="pt-2">
+        <a href="#contact" className="inline-block bg-indigo-600 text-white px-4 py-2 rounded-md">Get In Touch</a>
+      </div>
+    </div>
+  );
+}
+
+function ContactForm() {
+  const [state, setState] = React.useState({ name: '', email: '', message: '' });
+  function handleChange(e) {
+    setState(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  }
+  function handleSubmit(e) {
+    e.preventDefault();
+    // No backend included. Use mailto fallback to open user's email client.
+    const subject = encodeURIComponent('Website inquiry from ' + state.name);
+    const body = encodeURIComponent(state.message + '\n\nContact: ' + state.email);
+    window.location.href = `mailto:hello@directlink.co.za?subject=${subject}&body=${body}`;
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="bg-white p-6 rounded-xl shadow">
+      <div className="grid gap-3">
+        <label className="text-sm">Name</label>
+        <input name="name" value={state.name} onChange={handleChange} required className="border rounded-md px-3 py-2" />
+
+        <label className="text-sm">Email</label>
+        <input name="email" type="email" value={state.email} onChange={handleChange} required className="border rounded-md px-3 py-2" />
+
+        <label className="text-sm">Message</label>
+        <textarea name="message" value={state.message} onChange={handleChange} rows={6} required className="border rounded-md px-3 py-2"></textarea>
+
+        <div className="pt-2">
+          <button type="submit" className="bg-indigo-600 text-white px-4 py-2 rounded-md">Send message</button>
+        </div>
+      </div>
+    </form>
+  );
+}
