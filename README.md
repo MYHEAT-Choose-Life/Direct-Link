@@ -1,16 +1,27 @@
-# React + Vite
+# Fixing GitHub 403 Permission Error Using SSH
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Problem
+When running:
 
-Currently, two official plugins are available:
+```bash
+git push
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+remote: Permission to MYHEAT-Choose-Life/Direct-Link.git denied to noluzar.
+fatal: unable to access 'https://github.com/MYHEAT-Choose-Life/Direct-Link.git/': The requested URL returned error: 403
 
-## React Compiler
+ssh-keygen -t ed25519 -C "your_email@example.com"
+Your identification has been saved in /c/Users/YourUser/.ssh/id_ed25519
+Your public key has been saved in /c/Users/YourUser/.ssh/id_ed25519.pub
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
 
-## Expanding the ESLint configuration
+cat ~/.ssh/id_ed25519.pub
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+git remote set-url origin git@github.com:MYHEAT-Choose-Life/Direct-Link.git
+
+ssh -T git@github.com
+
+Hi <username>! You've successfully authenticated.
+
+git push
