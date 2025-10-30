@@ -1,13 +1,299 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>direct-link</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct Link</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-poppins">
+
+    <!-- NAVBAR -->
+    <nav class="flex flex-col sm:flex-row sm:items-center sm:justify-between px-4 sm:px-6 py-4 space-y-4 sm:space-y-0">
+        <div class="flex items-center font-bold text-xl sm:text-2xl">
+            <img src="img/image.png" alt="Logo" class="w-10 h-10 mr-2">
+            <h2>Direct <span class="text-green-400 italic">Link</span> Connect</h2>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4 text-xs sm:text-sm">
+            <a href="#home"
+                class="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-green-500 after:transition-all after:duration-300 hover:after:w-full">Home</a>
+            <a href="#why-us"
+                class="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-green-500 after:transition-all after:duration-300 hover:after:w-full">Why
+                Choose Us</a>
+            <a href="#about"
+                class="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-green-500 after:transition-all after:duration-300 hover:after:w-full">About
+                Us</a>
+            <a href="#services"
+                class="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-green-500 after:transition-all after:duration-300 hover:after:w-full">Services</a>
+            <a href="#contact"
+                class="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-green-500 after:transition-all after:duration-300 hover:after:w-full">Contact
+                Us</a>
+        </div>
+
+        <div class="w-full sm:w-auto">
+            <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });" class="bg-blue-900 rounded-full text-white text-sm font-light w-full sm:w-auto px-6 py-2">Get In
+                Touch</button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative w-full">
+        <img src="img/hero.png" alt="Hero" class="w-full h-auto object-cover">
+        <div
+            class="absolute inset-0 flex flex-col justify-center items-center px-4 sm:px-10 gap-2 space-y-6 text-center">
+            <h1 class="text-white text-3xl sm:text-5xl md:text-6xl font-bold flex items-center gap-2 flex-wrap">
+                Connect<span class="text-green-500">.</span>
+                <span class="text-green-500 italic">Grow.</span>
+                Thrive<span class="text-green-500">.</span>
+            </h1>
+            <div class="w-50 sm:w-56 md:w-80 h-1 bg-white/40"></div>
+            <div class="text-sm sm:text-lg md:text-xl text-white leading-relaxed font-semibold">
+                <p>We specialize in Social Media Marketing, Contact Center Services, Sales & Marketing Solutions, and
+                </p>
+                <p>Creative Marketing Materials tailored to drive your business growth.</p>
+            </div>
+            <div
+                class="flex flex-col sm:flex-row items-center sm:space-x-4 w-full sm:w-auto pt-10 space-y-4 sm:space-y-0">
+                <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });" class="bg-blue-900 text-white rounded-full px-6 py-2 w-full sm:w-auto">Get In Touch</button>
+                <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });"
+                    class="bg-white border-2 border-blue-900 text-blue-900 rounded-full px-6 py-2 w-full sm:w-auto">Contact
+                    Us</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US SECTION -->
+    <section id="why-us" class="flex flex-col items-center px-4 sm:px-6 md:px-20 py-10">
+        <h1 class="text-3xl sm:text-4xl font-bold text-center pb-4">Why Choose Us</h1>
+        <p class="text-gray-400 text-base sm:text-lg text-center font-semibold">We focus on personalized support to help
+            you succeed in South Africa's dynamic market.</p>
+        <p class="text-gray-400 text-base sm:text-lg text-center mt-1 font-semibold">Let's connect and elevate your
+            brand's presence.</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-10 w-full">
+
+            <!-- Card 1 -->
+            <div class="flex flex-col items-center text-center space-y-2 p-8 rounded-md bg-gray-100">
+              <i class="fa-solid fa-bullseye text-2xl p-2 w-12 h-12 rounded-full text-blue-900"></i>
+                <h3 class="font-semibold text-lg leading-tight text-center">Personalized<br>Marketing Strategy</h3>
+                <p class="text-gray-400 font-light">Tailored strategies to fit your unique business</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flex flex-col items-center text-center space-y-2 p-8 rounded-md bg-gray-100">
+               <i class="fa-solid fa-users text-2xl p-2 w-12 h-12 rounded-full text-blue-900"></i>
+                <h3 class="font-semibold text-lg leading-tight text-center">Expert<br>Support Team</h3>
+                <p class="text-gray-400 font-light">A dedicated team of experts to guide you every step of the way.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flex flex-col items-center text-center space-y-2 p-8 rounded-md bg-gray-100">
+                <i class="fa-solid fa-arrow-up-right-dots text-2xl p-2 w-12 h-12 rounded-full text-blue-900"></i>
+                <h3 class="font-semibold text-lg leading-tight text-center">Proven<br>Growth Results</h3>
+                <p class="text-gray-400 font-light">A track record of deliverable measurable growth for our clients.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="flex flex-col items-center text-center space-y-2 p-8 rounded-md bg-gray-100">
+              <i class="fa-solid fa-location-dot text-2xl p-2 w-12 h-12 rounded-full text-blue-900"></i>
+                <h3 class="font-semibold text-lg leading-tight text-center">Local<br>Market Expertise</h3>
+                <p class="text-gray-400 font-light">Deep understanding of the South African Market to give you a solid
+                    edge</p>
+            </div>
+
+        </div>
+
+        <div class="pt-10">
+            <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });" class="bg-blue-900 text-white rounded-full px-6 py-2 w-full sm:w-auto">Get In Touch</button>
+        </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section id="about" class="relative w-full">
+        <img src="img/about.png" alt="About Us" class="w-full h-auto object-cover">
+        <div
+            class="absolute inset-0 flex flex-col justify-center items-center bg-blue-900/80 px-4 sm:px-6 md:px-20 text-center space-y-6">
+            <h1 class="text-white text-3xl sm:text-4xl md:text-4xl font-bold">About Us</h1>
+            <p class="text-white text-base sm:text-lg md:text-xl max-w-4xl leading-relaxed">
+                Direct Link Communications is a dynamic marketing and communications agency passionate about
+                seeing our clients succeed in South Africa. We blend creativity with strategic expertise to
+                amplify our clients’ presence.
+            </p>
+            <div class="pt-8 w-50 max-w-xs sm:max-w-sm md:max-w-xs">
+                <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });" class="bg-white border-2 border-blue-900 text-blue-900 rounded-full w-full px-6 py-2">Contact
+                    Us</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="flex flex-col items-center px-6 md:px-20 py-7">
+        <h1 class="text-4xl text-center pb-4 font-bold">Our Services</h1>
+        <p class="text-gray-400 text-lg text-center font-semibold">Comprehensive marketing and communication services to help business
+            thrive.</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-20 gap-y-5 pt-10 w-full">
+            <!-- Card 1 -->
+            <div class="bg-gray-100 p-6 rounded-md space-y-4 w-full">
+                <h3 class="font-semibold text-lg text-blue-950 text-center md:text-left">Social Media Management</h3>
+                <div class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-regular fa-circle-check text-blue-950"></i>
+                        <p class="text-gray-600 font-light leading-snug">Scheduling & Calendar</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <i class="fa-regular fa-circle-check text-blue-950"></i>
+                        <p class="text-gray-600 font-light leading-snug">Content Creation</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-regular fa-circle-check text-blue-950"></i>
+                        <p class="text-gray-600 font-light leading-snug">Analytics & Engagement</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-gray-100 p-6 rounded-md space-y-4 w-full">
+                <h3 class="font-semibold text-lg text-blue-950 text-center md:text-left">Contact Center Solution</h3>
+                <div class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-regular fa-circle-check text-blue-950"></i>
+                        <p class="text-gray-600 font-light leading-snug">Appointment Scheduling</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-regular fa-circle-check text-blue-950"></i>
+                        <p class="text-gray-600 font-light leading-snug">Customer Engagement</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-regular fa-circle-check text-blue-950"></i>
+                        <p class="text-gray-600 font-light leading-snug">Lead Generation</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-gray-100 p-6 rounded-md space-y-4 w-full">
+                <h3 class="font-semibold text-lg text-blue-950 text-center md:text-left">Property Marketing</h3>
+                <div class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                       <i class="fa-regular fa-circle-check text-blue-950"></i>
+                        <p class="text-gray-600 font-light leading-snug">Property Campaigns</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                       <i class="fa-regular fa-circle-check text-blue-950"></i>
+                        <p class="text-gray-600 font-light leading-snug">Listing & Advertising</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional 2 cards in grid -->
+        <div class="grid grid-cols-2 pt-10 gap-20">
+            <!-- Card 4 -->
+            <div class="bg-gray-100 p-6 rounded-md space-y-4 w-full">
+                <h3 class="font-semibold text-lg text-blue-950 text-center md:text-left">Marketing Material</h3>
+                <div class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                       <i class="fa-regular fa-circle-check text-blue-950"></i>
+                        <p class="text-gray-600 font-light leading-snug">Brochures & Fliers</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                       <i class="fa-regular fa-circle-check text-blue-950"></i>
+                        <p class="text-gray-600 font-light leading-snug">Logos & Branding</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                       <i class="fa-regular fa-circle-check text-blue-950"></i>
+                        <p class="text-gray-600 font-light leading-snug">News Letter</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="bg-gray-100 p-6 rounded-md space-y-4 w-full">
+                <h3 class="font-semibold text-lg text-blue-950 text-center md:text-left">Sales & Marketing</h3>
+                <div class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                    <i class="fa-regular fa-circle-check text-blue-950"></i>
+
+                        <p class="text-gray-600 font-light leading-snug">Sales Strategy</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-regular fa-circle-check text-blue-950"></i>
+                        <p class="text-gray-600 font-light leading-snug">Lead Generation</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-regular fa-circle-check text-blue-950"></i>
+                        <p class="text-gray-600 font-light leading-snug">Marketing Campaign</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="bg-blue-900 text-white px-6 md:px-20 pt-10">
+        <h1 class="text-3xl md:text-4xl text-center pb-4 font-bold">Ready To Elevate Your Business</h1>
+        <p class="text-gray-400 text-base md:text-lg text-center font-semibold">Let Direct Link Communication be your partner in
+            growth</p>
+
+        <!-- Contact Cards -->
+        <div class="flex flex-col md:flex-row justify-evenly items-center gap-12 md:gap-30 pt-16">
+            <!-- Email -->
+            <div class="flex flex-col items-center space-y-7">
+                <i class="fa-solid fa-envelope text-4xl p-1 w-12 h-12 bg-blue-200 rounded text-blue-900"></i>
+                <div class="flex flex-col items-center text-sm font-light space-y-1">
+                    <h3 class="font-semibold text-base">Email</h3>
+                    <p>We will reply promptly</p>
+                </div>
+                <a href="#" class="text-sm underline">info@directlinkcommunications.co.za</a>
+            </div>
+
+            <!-- Call -->
+            <div class="flex flex-col items-center space-y-7">
+                <svg class="w-12 h-12 p-1 bg-blue-200 rounded text-blue-900" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.36 11.36 0 003.56.57 1 1 0 011 1v3.53a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.53a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.21 1.11l-2.2 2.2z" />
+                </svg>
+                <div class="flex flex-col items-center text-sm font-light space-y-1">
+                    <h3 class="font-semibold text-base">Call Us</h3>
+                    <p>Kindly reach to us now</p>
+                </div>
+                <a href="#" class="text-sm underline">0120230471</a>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="flex flex-col items-center space-y-7">
+              <i class="fa-brands fa-whatsapp text-4xl p-1 w-12 h-12 bg-blue-200 rounded text-blue-900"></i>
+                <div class="flex flex-col items-center text-sm font-light space-y-1">
+                    <h3 class="font-semibold text-base">WhatsApp</h3>
+                    <p>Reach us with WhatsApp</p>
+                </div>
+                <a href="#" class="text-sm underline">0670982760</a>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div
+            class="flex flex-col md:flex-row items-center text-[13px] font-light justify-between gap-6 md:gap-0 text-white pt-20">
+            <img src="img/lolo.png" class="w-32 md:w-auto">
+            <p class="text-center md:text-left">© 2025 Banque, fiduciaire, privée. All rights reserved.</p>
+            <div class="flex items-center space-x-4 text-lg">
+               <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+               <a href="#"><i class="fa-brands fa-instagram"></i></a>
+               <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+</body>
+
 </html>
