@@ -3,6 +3,14 @@ import Button from './Button'
 import logo from '../assets/image.png'
 
 const Navbar = () => {
+  const navLinks = [
+    { name: "Home", href: "#home" },
+    { name: "Why Choose Us", href: "#why-us" },
+    { name: "About Us", href: "#about" },
+    { name: "Services", href: "#services" },
+    { name: "Contact Us", href: "#contact" },
+  ]
+
   return (
     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between px-4 sm:px-6 py-4 space-y-4 sm:space-y-0">
 
@@ -14,12 +22,11 @@ const Navbar = () => {
       </div>
 
       <div className="flex flex-wrap justify-center gap-4 text-xs sm:text-sm">
-        {["Home", "Why Choose Us", "Services", "About Us", "Contact Us"].map(
-          (item, i) => (
-            <a
-              key={i}
-              href="#"
-              className="
+        {navLinks.map((link, i) => (
+          <a
+            key={i}
+            href={link.href}
+            className="
               relative
               after:content-['']
               after:absolute
@@ -32,11 +39,10 @@ const Navbar = () => {
               after:duration-300
               hover:after:w-full
             "
-            >
-              {item}
-            </a>
-          )
-        )}
+          >
+            {link.name}
+          </a>
+        ))}
       </div>
 
       <div className="w-full sm:w-auto">

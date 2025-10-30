@@ -8,13 +8,13 @@ import Contact from './components/Contact'
 
 const App = () => {
   return (
-    <div className='font-poppins'>
-      <Navbar/>
-      <HeroSection/>
-      <WhyChooseUs/>
-      <AboutUs/>
-      <Services/>
-      <Contact/>
+    <div className='font-poppins scroll-smooth'>
+      <Navbar />
+      <section id="home"><HeroSection /></section>
+      <section id="why-us"><WhyChooseUs /></section>
+      <section id="about"><AboutUs /></section>
+      <section id="services"><Services /></section>
+      <section id="contact"><Contact /></section>
     </div>
   )
 }
