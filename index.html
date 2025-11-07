@@ -4,7 +4,73 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Direct Link</title>
+    
+    <!-- SEO Meta Tags - ENHANCED FOR BETTER GOOGLE RANKING -->
+    <title>Direct Link Connect SA - Marketing & Communication Solutions South Africa | Johannesburg</title>
+    <meta name="description" content="Direct Link Connect is a leading South African marketing agency in Johannesburg offering Social Media Marketing, Contact Center Services, Sales Solutions, and Creative Marketing Materials. Call 012 023 0471 today!" />
+    <meta name="keywords" content="Direct Link SA, Direct Link Connect, marketing agency South Africa, social media marketing Johannesburg, contact center services SA, sales marketing solutions, digital marketing South Africa, marketing agency Sandton, Illovo marketing agency" />
+    <meta name="author" content="Direct Link Connect" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="https://www.directlinkconnect.co.za" />
+    
+    <!-- Location & Business Information for Local SEO -->
+    <meta name="geo.region" content="ZA-GP" />
+    <meta name="geo.placename" content="Sandton, Johannesburg" />
+    <meta name="geo.position" content="-26.132191;28.055679" />
+    <meta name="ICBM" content="-26.132191, 28.055679" />
+    
+    <!-- Open Graph Tags for Social Media Sharing - ENHANCED -->
+    <meta property="og:title" content="Direct Link Connect SA - Marketing & Communication Solutions South Africa" />
+    <meta property="og:description" content="Connect. Grow. Thrive. Leading South African marketing agency offering comprehensive marketing solutions in Johannesburg." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.directlinkconnect.co.za" />
+    <meta property="og:site_name" content="Direct Link Connect SA" />
+    <meta property="og:locale" content="en_ZA" />
+    
+    <!-- Twitter Card Tags - ENHANCED -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Direct Link Connect SA - Marketing Solutions South Africa" />
+    <meta name="twitter:description" content="Connect. Grow. Thrive. Leading marketing agency in Johannesburg, South Africa." />
+    <meta name="twitter:site" content="@directlinkconnect" />
+    
+    <!-- Structured Data for Google - JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MarketingAgency",
+      "name": "Direct Link Connect",
+      "alternateName": "Direct Link SA",
+      "description": "Leading marketing and communications agency in South Africa offering social media marketing, contact center services, and sales solutions",
+      "url": "https://www.directlinkconnect.co.za",
+      "telephone": "+27120230471",
+      "email": "info@directlinkconnect.co.za",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "35 Fricker Road",
+        "addressLocality": "Illovo, Sandton",
+        "addressRegion": "Gauteng",
+        "postalCode": "2196",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-26.132191",
+        "longitude": "28.055679"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "South Africa"
+      },
+      "priceRange": "$$",
+      "openingHours": "Mo-Fr 08:00-17:00",
+      "sameAs": [
+        "https://www.facebook.com/share/1T6s5zm96t/",
+        "https://www.instagram.com/direct_link_connect",
+        "https://www.linkedin.com/company/direct-link-connect/"
+      ]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -15,24 +81,27 @@
 
 <body class="font-poppins scroll-smooth">
 
-    <!-- NAVBAR -->
-    <nav class="bg-white shadow-md px-4 sm:px-6 py-4">
+    <!-- NAVBAR - UPDATED: Made sticky on scroll with z-index for proper layering -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md px-4 sm:px-6 py-4 z-50">
         <div class="flex items-center justify-between">
-            <!-- Logo -->
+            <!-- Logo - UPDATED: Improved alt text for accessibility -->
             <div class="flex items-center font-bold text-xl sm:text-2xl">
-                <img src="img/image.png" alt="Logo" class="w-10 h-10 mr-2">
+                <img src="img\directlinklogo.jpg" alt="Direct Link Connect Logo" class="w-10 h-10 mr-2">
                 <h2>Direct <span class="text-green-400 italic">Link</span> Connect</h2>
             </div>
 
-            <!-- Hamburger Icon (Mobile) -->
-            <button id="menu-btn" class="sm:hidden flex flex-col space-y-1.5 focus:outline-none">
+            <!-- Hamburger Icon (Mobile & Landscape) - UPDATED: Shows on mobile portrait AND landscape, hidden only on lg+ -->
+            <button id="menu-btn" class="lg:hidden flex flex-col space-y-1.5 focus:outline-none" 
+                    aria-label="Toggle navigation menu" 
+                    aria-expanded="false" 
+                    aria-controls="mobile-menu">
                 <span class="block w-6 h-0.5 bg-gray-800 transition-transform duration-300"></span>
                 <span class="block w-6 h-0.5 bg-gray-800 transition-opacity duration-300"></span>
                 <span class="block w-6 h-0.5 bg-gray-800 transition-transform duration-300"></span>
             </button>
 
-            <!-- Desktop Links -->
-            <div class="hidden sm:flex sm:items-center sm:gap-6 text-base">
+            <!-- Desktop Links - UPDATED: Only show on large screens to prevent wrapping -->
+            <div class="hidden lg:flex lg:items-center lg:gap-6 text-base">
                 <a href="#home"
                     class="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-green-500 after:transition-all after:duration-300 hover:after:w-full">Home</a>
                 <a href="#why-us"
@@ -48,8 +117,8 @@
                     Us</a>
             </div>
 
-            <!-- Desktop Button -->
-            <div class="hidden sm:block">
+            <!-- Desktop Button - UPDATED: Only show on large screens -->
+            <div class="hidden lg:block">
                 <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });"
                     class="bg-blue-900 rounded-full text-white text-sm font-light px-6 py-2 hover:bg-blue-800 transition">Get
                     In
@@ -57,22 +126,33 @@
             </div>
         </div>
 
-        <!-- Mobile Menu -->
+        <!-- Mobile/Landscape Menu - UPDATED: Slides from right, works in portrait and landscape -->
         <div id="mobile-menu"
-            class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out flex-col mt-4 space-y-3 sm:hidden text-center">
-            <a href="#home" class="block py-2 border-b border-gray-200 hover:text-green-500">Home</a>
-            <a href="#why-us" class="block py-2 border-b border-gray-200 hover:text-green-500">Why Choose Us</a>
-            <a href="#about" class="block py-2 border-b border-gray-200 hover:text-green-500">About Us</a>
-            <a href="#services" class="block py-2 border-b border-gray-200 hover:text-green-500">Services</a>
-            <a href="#contact" class="block py-2 border-b border-gray-200 hover:text-green-500">Contact Us</a>
+            class="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl transform translate-x-full transition-transform duration-500 ease-in-out lg:hidden flex flex-col pt-20 px-6 space-y-4 z-50"
+            role="navigation"
+            aria-hidden="true">
+            <!-- Close button -->
+            <button id="close-menu" class="absolute top-4 right-4 text-2xl text-gray-600 hover:text-gray-800" aria-label="Close menu">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            
+            <!-- UPDATED: Added mobile-menu-link class for auto-close functionality -->
+            <a href="#home" class="mobile-menu-link block py-3 border-b border-gray-200 hover:text-green-500 transition">Home</a>
+            <a href="#why-us" class="mobile-menu-link block py-3 border-b border-gray-200 hover:text-green-500 transition">Why Choose Us</a>
+            <a href="#about" class="mobile-menu-link block py-3 border-b border-gray-200 hover:text-green-500 transition">About Us</a>
+            <a href="#services" class="mobile-menu-link block py-3 border-b border-gray-200 hover:text-green-500 transition">Services</a>
+            <a href="#contact" class="mobile-menu-link block py-3 border-b border-gray-200 hover:text-green-500 transition">Contact Us</a>
             <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });"
-                class="bg-blue-900 rounded-full text-white text-sm font-light w-full px-6 py-2 hover:bg-blue-800 transition">Get
+                class="bg-blue-900 rounded-full text-white text-sm font-light w-full px-6 py-3 hover:bg-blue-800 transition mt-4">Get
                 In Touch</button>
         </div>
+        
+        <!-- Overlay for mobile menu -->
+        <div id="menu-overlay" class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out lg:hidden z-40"></div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section id="home" class="relative w-full h-screen">
+    <!-- HERO SECTION - UPDATED: Added top padding to account for fixed navbar -->
+    <section id="home" class="relative w-full h-screen pt-20">
         <!-- Background Image -->
         <img src="img/hero.png" alt="Hero" class="absolute inset-0 w-full h-full object-cover" />
 
@@ -109,8 +189,8 @@
     </section>
 
 
-    <!-- WHY CHOOSE US -->
-    <section id="why-us" class="flex flex-col items-center px-4 sm:px-8 md:px-20 py-12">
+    <!-- WHY CHOOSE US - UPDATED: Added top padding to account for fixed navbar scroll offset -->
+    <section id="why-us" class="flex flex-col items-center px-4 sm:px-8 md:px-20 py-12 scroll-mt-20">
         <h1 class="text-3xl sm:text-4xl font-bold text-center pb-4">Why Choose Us</h1>
         <p class="text-gray-500 text-base sm:text-lg text-center font-medium max-w-2xl">
             We focus on personalized support to help you succeed in South Africa's dynamic market.
@@ -153,8 +233,8 @@
         </div>
     </section>
 
-    <!-- ABOUT US -->
-    <section id="about" class="relative w-full">
+    <!-- ABOUT US - UPDATED: Added scroll margin for fixed navbar -->
+    <section id="about" class="relative w-full scroll-mt-20">
         <!-- Background Image -->
         <div class="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh]">
             <img src="img/about.png" alt="About Us" class="absolute inset-0 w-full h-full object-cover" />
@@ -168,9 +248,10 @@
                     About Us
                 </h1>
                 <p class="text-white text-sm sm:text-lg md:text-xl max-w-3xl leading-relaxed">
-                    Direct Link Communications is a dynamic marketing and communications
-                    agency passionate about seeing our clients succeed in South Africa.
-                    We blend creativity with strategy to amplify our clients’ presence.
+                    Direct Link Connect is a passionate and dynamic marketing and communications agency in South Africa 
+                    that focuses on connecting businesses with their audiences through impactful ideas and effective strategies.
+                    Our mission is to help clients achieve their business goals by combining creativity with strategic expertise,
+                    ensuring each brand not only gains attention but also truly resonates with its audience.
                 </p>
                 <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });"
                     class="bg-white border-2 border-blue-900 text-blue-900 rounded-full px-8 py-3 hover:bg-blue-50 transition">
@@ -181,15 +262,15 @@
     </section>
 
 
-<!-- SERVICES -->
-<section id="services" class="flex flex-col items-center px-4 sm:px-8 md:px-20 py-12">
+<!-- SERVICES - UPDATED: Added scroll margin for fixed navbar -->
+<section id="services" class="flex flex-col items-center px-4 sm:px-8 md:px-20 py-12 scroll-mt-20">
   <h1 class="text-3xl sm:text-4xl font-bold text-center pb-4">Our Services</h1>
   <p class="text-gray-500 text-base sm:text-lg text-center font-medium max-w-2xl">
     Comprehensive marketing and communication services to help your business thrive.
   </p>
 
-  <!-- Unified Responsive Grid for All 5 Cards -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 pt-10 w-full">
+  <!-- UPDATED: Rebalanced grid to handle 5 cards better - uses 2 columns on tablet, 3 on desktop with centered last card -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 pt-10 w-full max-w-6xl mx-auto">
     
     <!-- Card 1 -->
     <div class="bg-gray-100 p-6 rounded-md space-y-4 w-full shadow-md hover:shadow-lg transition">
@@ -271,8 +352,8 @@
       </div>
     </div>
 
-    <!-- Card 5 -->
-    <div class="bg-gray-100 p-6 rounded-md space-y-4 w-full shadow-md hover:shadow-lg transition">
+    <!-- Card 5 - UPDATED: Added centering for last card on desktop view -->
+    <div class="bg-gray-100 p-6 rounded-md space-y-4 w-full shadow-md hover:shadow-lg transition sm:col-span-2 lg:col-span-1 lg:col-start-2">
       <h3 class="font-semibold text-lg text-blue-950 text-center sm:text-left">
         Sales & Marketing
       </h3>
@@ -295,40 +376,131 @@
 </section>
 
 
-    <!-- CONTACT -->
-    <section id="contact" class="bg-blue-900 text-white px-4 sm:px-8 md:px-20 pt-12">
+    <!-- CONTACT - UPDATED: Added scroll margin for fixed navbar -->
+    <section id="contact" class="bg-blue-900 text-white px-4 sm:px-8 md:px-20 pt-12 scroll-mt-20">
         <h1 class="text-3xl sm:text-4xl text-center pb-4 font-bold">Ready To Elevate Your Business</h1>
         <p class="text-gray-300 text-base sm:text-lg text-center font-medium max-w-2xl mx-auto">
-            Let Direct Link Communication be your partner in growth.
+            Let Direct Link Connect be your partner in growth.
         </p>
 
-        <div class="flex flex-col md:flex-row justify-evenly items-center pt-12 space-y-10">
-            <div class="flex flex-col items-center space-y-4">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-start md:gap-6 lg:gap-8 xl:gap-12 items-center pt-12 space-y-10 md:space-y-0 max-w-7xl mx-auto">
+            <div class="flex flex-col items-center space-y-4 md:flex-1">
                 <i class="fa-solid fa-envelope text-4xl p-3 w-14 h-14 bg-blue-200 rounded text-blue-900"></i>
                 <h3 class="font-semibold text-base">Email</h3>
-                <p class="text-gray-300 text-sm">We will reply promptly</p>
-                <a href="#" class="underline text-sm">info@directlinkcommunications.co.za</a>
+                <p class="text-gray-300 text-sm text-center">We will reply promptly</p>
+                <!-- UPDATED: Added functional mailto link -->
+                <a href="mailto:info@directlinkconnect.co.za" class="underline text-sm text-center break-all">info@directlinkconnect.co.za</a>
             </div>
 
-            <div class="flex flex-col items-center space-y-4">
+            <div class="flex flex-col items-center space-y-4 md:flex-1">
                 <i class="fa-solid fa-phone text-4xl p-3 w-14 h-14 bg-blue-200 rounded text-blue-900"></i>
                 <h3 class="font-semibold text-base">Call Us</h3>
-                <p class="text-gray-300 text-sm">Kindly reach to us now</p>
-                <a href="#" class="underline text-sm">0120230471</a>
+                <p class="text-gray-300 text-sm text-center">Kindly reach out to us now</p>
+                <!-- UPDATED: Added functional tel link -->
+                <a href="tel:+27120230471" class="underline text-sm">0120230471</a>
             </div>
 
-            <div class="flex flex-col items-center space-y-4">
+            <div class="flex flex-col items-center space-y-4 md:flex-1"><head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags - ENHANCED FOR BETTER GOOGLE RANKING -->
+    <title>Direct Link Connect SA - Marketing & Communication Solutions South Africa | Johannesburg</title>
+    <meta name="description" content="Direct Link Connect is a leading South African marketing agency in Johannesburg offering Social Media Marketing, Contact Center Services, Sales Solutions, and Creative Marketing Materials. Call 012 023 0471 today!" />
+    <meta name="keywords" content="Direct Link SA, Direct Link Connect, marketing agency South Africa, social media marketing Johannesburg, contact center services SA, sales marketing solutions, digital marketing South Africa, marketing agency Sandton, Illovo marketing agency" />
+    <meta name="author" content="Direct Link Connect" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="https://www.directlinkconnect.co.za" />
+    
+    <!-- Location & Business Information for Local SEO -->
+    <meta name="geo.region" content="ZA-GP" />
+    <meta name="geo.placename" content="Sandton, Johannesburg" />
+    <meta name="geo.position" content="-26.132191;28.055679" />
+    <meta name="ICBM" content="-26.132191, 28.055679" />
+    
+    <!-- Open Graph Tags for Social Media Sharing - ENHANCED -->
+    <meta property="og:title" content="Direct Link Connect SA - Marketing & Communication Solutions South Africa" />
+    <meta property="og:description" content="Connect. Grow. Thrive. Leading South African marketing agency offering comprehensive marketing solutions in Johannesburg." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.directlinkconnect.co.za" />
+    <meta property="og:site_name" content="Direct Link Connect SA" />
+    <meta property="og:locale" content="en_ZA" />
+    
+    <!-- Twitter Card Tags - ENHANCED -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Direct Link Connect SA - Marketing Solutions South Africa" />
+    <meta name="twitter:description" content="Connect. Grow. Thrive. Leading marketing agency in Johannesburg, South Africa." />
+    <meta name="twitter:site" content="@directlinkconnect" />
+    
+    <!-- Structured Data for Google - JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MarketingAgency",
+      "name": "Direct Link Connect",
+      "alternateName": "Direct Link SA",
+      "description": "Leading marketing and communications agency in South Africa offering social media marketing, contact center services, and sales solutions",
+      "url": "https://www.directlinkconnect.co.za",
+      "telephone": "+27120230471",
+      "email": "info@directlinkconnect.co.za",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "35 Fricker Road",
+        "addressLocality": "Illovo, Sandton",
+        "addressRegion": "Gauteng",
+        "postalCode": "2196",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-26.132191",
+        "longitude": "28.055679"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "South Africa"
+      },
+      "priceRange": "$$",
+      "openingHours": "Mo-Fr 08:00-17:00",
+      "sameAs": [
+        "https://www.facebook.com/share/1T6s5zm96t/",
+        "https://www.instagram.com/direct_link_connect",
+        "https://www.linkedin.com/company/direct-link-connect/"
+      ]
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
                 <i class="fa-brands fa-whatsapp text-4xl p-3 w-14 h-14 bg-blue-200 rounded text-blue-900"></i>
                 <h3 class="font-semibold text-base">WhatsApp</h3>
-                <p class="text-gray-300 text-sm">Reach us on WhatsApp</p>
-                <a href="#" class="underline text-sm">0615087889</a>
+                <p class="text-gray-300 text-sm text-center">Reach us on WhatsApp</p>
+                <!-- UPDATED: Added functional WhatsApp link -->
+                <a href="https://wa.me/27615087889" target="_blank" rel="noopener noreferrer" class="underline text-sm">0615087889</a>
+            </div>
+
+            <div class="flex flex-col items-center space-y-4 md:flex-1">
+                <i class="fa-solid fa-location-dot text-4xl p-3 w-14 h-14 bg-blue-200 rounded text-blue-900"></i>
+                <h3 class="font-semibold text-base">Location</h3>
+                <p class="text-gray-300 text-sm text-center">Visit our office</p>
+                <!-- UPDATED: Added Google Maps link -->
+                <a href="https://www.google.com/maps/search/?api=1&query=35+fricker+road+illovo+sandton+2196+gauteng+South+Africa" target="_blank" rel="noopener noreferrer" class="underline text-sm text-center px-2">35 Fricker Road, Illovo, Sandton</a>
             </div>
         </div>
 
         <footer
+        
             class="flex flex-col md:flex-row justify-between items-center gap-6 text-[13px] font-light text-white pt-16">
-            <img src="img/lolo.png" class="w-auto md:w-auto" alt="Logo" />
-            <p class="text-center md:text-left">© 2025 Banque, fiduciaire, privée. All rights reserved.</p>
+            <!-- UPDATED: Improved alt text for accessibility -->
+            <img src="img/lolo.png" class="w-auto md:w-auto" alt="Direct Link Connect Footer Logo" />
+            <!-- UPDATED: Fixed copyright text to match company name -->
+            <p class="text-center md:text-left">© 2025 Direct Link Connect. All rights reserved.</p>
             <div class="flex space-x-4 text-lg">
                 <a href="https://www.facebook.com/share/1T6s5zm96t/"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/direct_link_connect"><i class="fa-brands fa-instagram"></i></a>
@@ -338,28 +510,78 @@
         </footer>
     </section>
 
-    <!-- SCRIPT for menu toggle -->
+    <!-- SCRIPT for menu toggle - UPDATED: New slide-in menu behavior with overlay -->
     <script>
         const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu');
         const mobileMenu = document.getElementById('mobile-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
         const spans = menuBtn.querySelectorAll('span');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
 
-        menuBtn.addEventListener('click', () => {
-            // Toggle slide animation
-            if (mobileMenu.classList.contains('max-h-0')) {
-                mobileMenu.classList.remove('max-h-0');
-                mobileMenu.classList.add('max-h-96'); // opens smoothly
-            } else {
-                mobileMenu.classList.add('max-h-0'); // closes smoothly
-                mobileMenu.classList.remove('max-h-96');
-            }
-
+        // Function to open menu
+        function openMenu() {
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenu.classList.add('translate-x-0');
+            menuOverlay.classList.remove('opacity-0', 'pointer-events-none');
+            menuOverlay.classList.add('opacity-100');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+            
+            // Update ARIA attributes
+            menuBtn.setAttribute('aria-expanded', 'true');
+            mobileMenu.setAttribute('aria-hidden', 'false');
+            
             // Animate hamburger to X
-            spans[0].classList.toggle('rotate-45');
-            spans[0].classList.toggle('translate-y-2');
-            spans[1].classList.toggle('opacity-0');
-            spans[2].classList.toggle('-rotate-45');
-            spans[2].classList.toggle('-translate-y-2');
+            spans[0].classList.add('rotate-45', 'translate-y-2');
+            spans[1].classList.add('opacity-0');
+            spans[2].classList.add('-rotate-45', '-translate-y-2');
+        }
+
+        // Function to close menu
+        function closeMenu() {
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenu.classList.remove('translate-x-0');
+            menuOverlay.classList.add('opacity-0', 'pointer-events-none');
+            menuOverlay.classList.remove('opacity-100');
+            document.body.style.overflow = ''; // Restore scrolling
+            
+            // Update ARIA attributes
+            menuBtn.setAttribute('aria-expanded', 'false');
+            mobileMenu.setAttribute('aria-hidden', 'true');
+            
+            // Animate X back to hamburger
+            spans[0].classList.remove('rotate-45', 'translate-y-2');
+            spans[1].classList.remove('opacity-0');
+            spans[2].classList.remove('-rotate-45', '-translate-y-2');
+        }
+
+        // Toggle menu on hamburger button click
+        menuBtn.addEventListener('click', () => {
+            if (mobileMenu.classList.contains('translate-x-full')) {
+                openMenu();
+            } else {
+                closeMenu();
+            }
+        });
+
+        // Close menu on close button click
+        closeMenuBtn.addEventListener('click', closeMenu);
+
+        // Close menu on overlay click
+        menuOverlay.addEventListener('click', closeMenu);
+
+        // Auto-close mobile menu when clicking on menu links
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                closeMenu();
+            });
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !mobileMenu.classList.contains('translate-x-full')) {
+                closeMenu();
+            }
         });
     </script>
 
